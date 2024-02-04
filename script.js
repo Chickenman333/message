@@ -3,7 +3,6 @@ const question = document.querySelector(".question");
 const gif = document.querySelector(".gif");
 const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
-let noBtnFirstHover = true;
 
 yesBtn.addEventListener("click", () => {
   question.innerHTML = "Yipee!";
@@ -23,11 +22,6 @@ yesBtn.addEventListener("click", () => {
 });
 
 noBtn.addEventListener("mouseover", () => {
-  if (noBtnFirstHover) {
-    gif.src = "https://i.pinimg.com/originals/9d/19/15/9d19152c47c6fddac22b0457e73bedd6.gif";
-    noBtnFirstHover = false; // Prevent GIF from changing again after the first hover
-  }
-
   noBtn.style.position = 'absolute'; // Ensure button is positioned absolutely
   const noBtnRect = noBtn.getBoundingClientRect();
   const maxX = window.innerWidth - noBtnRect.width;
