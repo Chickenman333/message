@@ -13,6 +13,10 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.wrapper {
+    position: relative; /* Ensure wrapper has a relative positioning context */
+}
+
 .gif {
     height: 80%;
     width: 80%;
@@ -29,12 +33,12 @@ h2 {
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around; /* Changed to space-around for initial positioning */
     margin-top: 50px;
+    position: relative; /* Needed to position buttons absolutely within */
 }
 
 button {
-    position: absolute;
     width: 150px;
     height: inherit;
     color: white;
@@ -44,11 +48,16 @@ button {
     box-shadow: 0 2px 4px gray;
     border: 2px solid #e94d58;
     font-size: 1.2em;
-    background: #e94d58; /* Adjusted for both buttons to simplify */
-    transition: top 0.5s, left 0.5s; /* Smooth transition for No button */
+    transition: top 0.5s, left 0.5s; /* Smooth transition for moving */
 }
 
-button:nth-child(2) {
+.yes-btn {
+    background: #e94d58;
+}
+
+.no-btn {
+    position: absolute; /* Apply absolute positioning only to the No button */
+    right: 0; /* Start from the right end within btn-group */
     background: white;
     color: #e94d58;
 }
