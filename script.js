@@ -10,7 +10,7 @@ yesBtn.addEventListener("click", () => {
   const gifWidth = gif.offsetWidth;
   const gifHeight = gif.offsetHeight;
 
-  gif.src = "https://media.tenor.com/yr7z512oIf4AAAAi/peach-goma-shy-blush-heart.gif";
+  gif.src = "https://i.pinimg.com/originals/91/bb/e5/91bbe5c5c9d32d755661e2cde47107e5.gif";
 
   gif.onload = () => {
     gif.style.width = gifWidth + 'px';
