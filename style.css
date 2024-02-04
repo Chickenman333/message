@@ -41,10 +41,10 @@ button {
     outline: none;
     cursor: pointer;
     box-shadow: 0 2px 4px gray;
-    border: none; /* Adjusted for cleaner look */
+    border: 2px solid #e94d58;
     font-size: 1.2em;
     background: #e94d58; /* Adjusted for both buttons to simplify */
-    transition: top 0.5s, left 0.5s, background-color 0.5s; /* Added background-color transition */
+    transition: top 0.5s, left 0.5s; /* Smooth transition for No button */
 }
 button:nth-child(1) {
     margin-left: -200px;
