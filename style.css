@@ -14,7 +14,7 @@ body {
 }
 
 .wrapper {
-    position: relative; /* Ensure wrapper has a relative positioning context */
+    text-align: center; /* Center the contents */
 }
 
 .gif {
@@ -31,33 +31,34 @@ h2 {
 
 .btn-group {
     width: 100%;
-    height: 50px;
     display: flex;
-    justify-content: space-around; /* Changed to space-around for initial positioning */
+    justify-content: center;
     margin-top: 50px;
-    position: relative; /* Needed to position buttons absolutely within */
+    position: relative; /* Make sure btn-group has a relative positioning context */
 }
 
 button {
     width: 150px;
-    height: inherit;
+    height: 50px; /* Set a specific height for buttons */
     color: white;
+    font-size: 1.2em;
     border-radius: 30px;
     outline: none;
     cursor: pointer;
     box-shadow: 0 2px 4px gray;
-    border: 2px solid #e94d58;
-    font-size: 1.2em;
-    transition: top 0.5s, left 0.5s; /* Smooth transition for moving */
+    border: none; /* Remove border or set as needed */
+    background: #e94d58; /* Default background for buttons */
+    transition: all 0.5s ease; /* Apply transition to all properties */
 }
 
 .yes-btn {
-    background: #e94d58;
+    margin-right: 20px; /* Adjust spacing as needed */
 }
 
 .no-btn {
-    position: absolute; /* Apply absolute positioning only to the No button */
-    right: 0; /* Start from the right end within btn-group */
+    margin-left: 20px; /* Adjust spacing as needed */
+    position: relative; /* Ensure the no-btn can move freely */
     background: white;
     color: #e94d58;
 }
+
