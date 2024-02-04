@@ -22,10 +22,9 @@ yesBtn.addEventListener("click", () => {
 });
 
 noBtn.addEventListener("mouseover", () => {
-  noBtn.style.position = 'absolute'; // Ensure button is positioned absolutely
-  const noBtnRect = noBtn.getBoundingClientRect();
-  const maxX = window.innerWidth - noBtnRect.width;
-  const maxY = window.innerHeight - noBtnRect.height;
+  // Make sure button can freely move within the wrapper
+  const maxX = wrapper.offsetWidth - noBtn.offsetWidth;
+  const maxY = wrapper.offsetHeight - noBtn.offsetHeight;
 
   const randomX = Math.floor(Math.random() * maxX);
   const randomY = Math.floor(Math.random() * maxY);
