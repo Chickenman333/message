@@ -54,3 +54,7 @@ button:nth-child(2) {
     background: white;
     color: #e94d58;
 }
+.no-btn {
+  position: relative; /* Make sure this is set to 'absolute' if you want it to move freely across the page */
+  transition: top 0.5s ease, left 0.5s ease; /* Adjust timing to your preference */
+}
